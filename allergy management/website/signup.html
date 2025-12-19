@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - AllergyGuard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="text-align: center; margin-top: 50px;">
+        <h1>Create Profile</h1>
+        
+        <div class="card" style="width: 320px; display: block; margin: 0 auto; text-align: left;">
+            
+            <label>Login Details</label>
+            <input type="text" id="su-username" placeholder="Choose a Username" class="input-box">
+            <input type="password" id="su-password" placeholder="Password" class="input-box">
+
+            <label>Personal Details</label>
+            <input type="text" id="su-fname" placeholder="First Name" class="input-box">
+            <input type="text" id="su-lname" placeholder="Last Name" class="input-box">
+            <input type="number" id="su-age" placeholder="Age" class="input-box">
+
+            <!-- ✅ NEW FIELDS START -->
+            <label>Contact Info</label>
+            <input type="email" id="su-email" placeholder="Email Address" class="input-box">
+            <input type="tel" id="su-phone" placeholder="Phone (e.g. +44 7700 900000)" class="input-box">
+            <!-- ✅ NEW FIELDS END -->
+            
+            <label>Medical Information</label>
+            <select id="su-allergy" class="input-box">
+                <option value="Gluten">Gluten (Coeliac)</option>
+                <option value="Dairy">Dairy (Lactose)</option>
+                <option value="Nuts">Nuts</option>
+                <option value="Shellfish">Shellfish</option>
+            </select>
+
+            <button onclick="handleSignup()" class="btn-primary">Complete Sign Up</button>
+            
+            <p style="text-align: center; margin-top: 15px;">
+                <a href="login.html">Back to Login</a>
+            </p>
+        </div>
+    </div>
+    
+    <style>
+        .input-box { width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; }
+        .btn-primary { width: 100%; padding: 10px; background: #28a745; color: white; border: none; cursor: pointer; }
+        label { font-size: 0.8rem; font-weight: bold; color: #555; display:block; margin-top:10px; }
+    </style>
+    
+    <script src="app.js"></script>
+</body>
+</html>

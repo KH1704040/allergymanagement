@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin – Users</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="card" style="display:flex;justify-content:space-between;align-items:center;">
+    <div>
+      <h1>Admin Control Centre</h1>
+      <p style="color:#666;margin:4px 0 0;">Review every user account, make edits or remove them if needed.</p>
+    </div>
+    <button onclick="logout()" class="primary-btn">Logout</button>
+  </header>
+      <nav>
+        <div class="logo">🛡️ AllergyGuard</div>
+        <div class="user-controls">
+            <a href="adminhelp.html" class="nav-link">Messages</a>
+            
+            
+        </div>
+    </nav>
+
+  <section class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <h2>All Users (<span id="user-count">0</span>)</h2>
+      <button id="refresh-users" class="ghost-btn">Refresh</button>
+    </div>
+    
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Age</th> <th>Allergy</th>
+          <th>Joined</th>
+          <th style="width:160px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2 id="form-title">Add New User</h2>
+    <form id="user-form" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+      <input type="text" id="f-first" placeholder="First name" required />
+      <input type="text" id="f-last" placeholder="Last name" required />
+      <input type="text" id="f-username" placeholder="Username" required />
+      
+      <input type="email" id="f-email" placeholder="Email Address" />
+      <input type="text" id="f-phone" placeholder="Phone Number" />
+
+      <input type="password" id="f-password" placeholder="Password" required />
+      <input type="number" id="f-age" placeholder="Age" min="1" />
+      
+      <select id="f-allergy" style="padding:10px; border:1px solid #ddd; border-radius:4px;">
+          <option value="">Select Allergy...</option>
+          <option value="Gluten">Gluten</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Nuts">Nuts</option>
+          <option value="Shellfish">Shellfish</option>
+      </select>
+
+      <div style="grid-column:1 / -1;display:flex;gap:12px;justify-content:flex-end;">
+        <button type="button" id="cancel-edit" class="ghost-btn" style="display:none;">Cancel</button>
+        <button type="submit" class="primary-btn">Save</button>
+      </div>
+    </form>
+  </section>
+
+
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+  
+    <!-- reCAPTCHA Configuration -->
+    <script>
+        const RECAPTCHA_SITE_KEY = '6Lf33h0sAAAAAEf3lxBeqv0VDYanlF4gL1PnxtB2';
+        const RECAPTCHA_VERSION = 'v2'; // 'v2' for checkbox, 'v3' for invisible
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit&onload=onRecaptchaLoad" async defer></script>
+
+</head>
+<body>
+
+    <div class="container" style="max-width: 400px; margin-top: 50px;">
+
+
+        <h1>Welcome Back</h1>
+        <div class="card">
+            <input type="text" id="li-username" placeholder="Username" class="input-box">
+            <input type="password" id="li-password" placeholder="Password" class="input-box">
+            <div id="recaptcha-container"></div>
+            <button onclick="handleLogin()" class="action-btn">Login</button>
+            <br><br>
+            <p><a href="signup.html">Sign Up</a></p>
+        </div>
+
+    
+    
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

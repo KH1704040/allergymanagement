@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <title>AllergyGuard Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">🛡️ AllergyGuard</div>
+        <div class="user-controls">
+            <a href="profile.html" class="nav-link">My Info</a>
+            <a href="forme.html" class="nav-link">For Me</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1 id="welcome-msg">Loading...</h1>
+    </div>
+
+    <!-- AI CHAT -->
+    <div class="chat-section">
+        <h2>💬 Assistant</h2>
+        <p>Information and advice on allergies and intolerances could be inaccurate or incomplete. 
+            Please use this as a guide only.</p>
+        <div id="chat-window" class="chat-window">
+            <div class="message-bubble ai-msg">Hello! How can I help?</div>
+        </div>
+        <div class="input-group">
+            <input type="text" id="chat-input" placeholder="Ask a question..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
